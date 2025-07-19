@@ -6,19 +6,29 @@
         href: "../App.vue",
         id: "company_name",
     });
+
+    const isMenuOpen = ref(false);
+    function toogleMenu () {
+        isMenuOpen.value = !isMenuOpen.value;
+    }
 </script>
 
 <template>
-    <header class="flex justify-between p-5">
+    <header class="flex justify-between p-10">
         <a :="homePageInfo">The People</a>
         <div class="container_menu_options">
-            <ArrowMenu />
+            <ArrowMenu
+                @click="toogleMenu" 
+                :class="{ '-rotate-90' : isMenuOpen}"
+                class="transition-transform duration-300 ease-in-out"
+            />
+            <ul v-if="isMenuOpen"
+                class="absolute top-19 right-7 text-right" >
+                <li><a href="#about">Why Us</a></li>
+                <li><a href="#doing">What We Do</a></li>
+                <li><a href="#pricing">Princing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </header>
 </template>
-
-<style scoped>
-    header {
-        border: 2px solid red;
-    }
-</style>

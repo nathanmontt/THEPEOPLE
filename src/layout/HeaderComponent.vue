@@ -14,7 +14,7 @@
 </script>
 
 <template>
-    <header class="flex justify-between p-10">
+    <div class="flex justify-between p-10 absolute right-0 left-0">
         <a :="homePageInfo">The People</a>
         <div class="container_menu_options">
             <ArrowMenu
@@ -30,5 +30,5 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </header>
+    </div>
 </template>

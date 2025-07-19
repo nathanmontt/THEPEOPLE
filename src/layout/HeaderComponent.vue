@@ -3,13 +3,17 @@
     import ArrowMenu from '../components/icons/ArrowMenu.vue';
 
     const homePageInfo = reactive({
-        href: "../App.vue",
+        href: "#",
         id: "company_name",
     });
 
     const isMenuOpen = ref(false);
     function toogleMenu () {
         isMenuOpen.value = !isMenuOpen.value;
+    }
+
+    function closeMenuAndNavigate (event) {
+        isMenuOpen.value = false;
     }
 </script>
 
@@ -23,11 +27,11 @@
                 class="transition-transform duration-300 ease-in-out"
             />
             <ul v-if="isMenuOpen"
-                class="absolute top-19 right-7 text-right" >
-                <li><a href="#about">Why Us</a></li>
-                <li><a href="#doing">What We Do</a></li>
-                <li><a href="#pricing">Princing</a></li>
-                <li><a href="#contact">Contact</a></li>
+                class="absolute top-19 right-7 text-right">
+                <li><a href="#about" @click="closeMenuAndNavigate">Why Us</a></li>
+                <li><a href="#doing" @click="closeMenuAndNavigate">What We Do</a></li>
+                <li><a href="#pricing" @click="closeMenuAndNavigate">Pricing</a></li>
+                <li><a href="#contact" @click="closeMenuAndNavigate">Contact</a></li>
             </ul>
         </div>
     </div>

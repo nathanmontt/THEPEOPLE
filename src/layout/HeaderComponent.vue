@@ -30,7 +30,6 @@
                 class="absolute top-19 right-7 text-right">
                 <li><a href="#about" @click="closeMenuAndNavigate">Why Us</a></li>
                 <li><a href="#doing" @click="closeMenuAndNavigate">What We Do</a></li>
-                <li><a href="#pricing" @click="closeMenuAndNavigate">Pricing</a></li>
                 <li><a href="#contact" @click="closeMenuAndNavigate">Contact</a></li>
             </ul>
         </div>

@@ -4,7 +4,6 @@
   import DoingComponent from './layout/DoingComponent.vue';
   import HeaderComponent from './layout/HeaderComponent.vue';
   import HeroComponent from './layout/HeroComponent.vue';
-  import PricingComponent from './layout/PricingComponent.vue';
 </script>
 
 <template>
@@ -19,9 +18,6 @@
     </div>
     <div id="doing">
       <DoingComponent />
-    </div>
-    <div id="pricing">
-      <PricingComponent />
     </div>
     <div id="contact">
       <ContactComponent />
